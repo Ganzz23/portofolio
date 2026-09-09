@@ -3,38 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Saya</title>
+    <title>Ridho Mesha Putra — Portofolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <header>
-        <p>
-        <marquee scrollamount="25">Halo, Saya RyRidh</marquee>
-        <marquee scrollamount="25">Web Developer & Designer</marquee>
-        </p>
+ 
+    <header class="site-header">
+        <div class="wrap header-inner">
+            <span class="header-mark">RM</span>
+            <nav class="header-nav">
+                <a href="#tentang">Tentang</a>
+                <a href="#proyek">Proyek</a>
+                <a href="#kontak">Kontak</a>
+            </nav>
+        </div>
     </header>
-
-    <section id="about">
-        <h2>Tentang Saya</h2>
-        <p>Saya adalah seorang pengembang web yang berfokus pada pembuatan aplikasi web modern dan responsif.</p>
-    </section>
-
-    <section id="projects">
-        <h2>Proyek Saya</h2>
-          <div class="card-body">
-                    <span class="badge-category">Menjadi Pria Sigma</span>
-                    <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwNvubANgsW4D8iWXUETNgEmT-WecOAmi7wZ7S6YXNqw&s=10" class="btn-detail">Contoh Saya</a>
-                 </div>
-        <ul>
-            <li><strong>Sistem Presensi:</strong> Aplikasi pencatatan kehadiran pegawai.</li>
-            <li><strong>Website Portofolio:</strong> Landing page pribadi menggunakan GitHub Pages.</li>
-        </ul>
-    </section>
-
-    <footer>
+ 
+    <main>
+        <section class="hero wrap">
+            <p class="hero-eyebrow">Web Developer &amp; Designer</p>
+            <h1 class="hero-title">Ridho Mesha<br>Putra</h1>
+            <p class="hero-desc">Saya membangun aplikasi web modern dan responsif — dari sistem internal untuk operasional harian sampai halaman personal yang ringan dan cepat diakses.</p>
+        </section>
+ 
+        <section id="tentang" class="about wrap">
+            <div class="section-head">
+                <h2>Tentang Saya</h2>
+            </div>
+            <p>Saya adalah seorang pengembang web yang berfokus pada pembuatan aplikasi yang jelas fungsinya dan nyaman dipakai. Pendekatan saya sederhana: mulai dari kebutuhan pengguna, lalu diterjemahkan jadi antarmuka yang tidak ribet dan kode yang mudah dirawat.</p>
+        </section>
+ 
+        <section id="proyek" class="projects wrap">
+            <div class="section-head">
+                <h2>Proyek Saya</h2>
+            </div>
+ 
+            <ul class="project-list">
+                <li class="project-item">
+                    <div class="project-info">
+                        <h3>Sistem Presensi</h3>
+                        <p>Aplikasi pencatatan kehadiran pegawai.</p>
+                    </div>
+                </li>
+                <li class="project-item">
+                    <div class="project-info">
+                        <h3>Website Portofolio</h3>
+                        <p>Landing page pribadi menggunakan GitHub Pages.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+ 
+    <footer id="kontak" class="site-footer wrap">
         <p>&copy; 2026 Ridho Mesha Putra. All rights reserved.</p>
     </footer>
-
+ 
 </body>
 </html>
