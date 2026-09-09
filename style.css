@@ -1,9 +1,13 @@
 :root {
-    --bg: #F6F5F1;
-    --ink: #17181A;
-    --ink-soft: #55575B;
-    --accent: #2F6D5A;
-    --line: #DEDBD3;
+    --cream: #F7F4EE;
+    --ink-deep: #15121F;
+    --ink: #1B1A1F;
+    --ink-soft: #615E68;
+    --paper-soft: #A79FC4;
+    --accent: #7C6FF0;
+    --accent-coral: #FF7A50;
+    --line: #E4DFD6;
+    --line-dark: #2C2740;
     --font-display: "Fraunces", serif;
     --font-body: "Inter", sans-serif;
 }
@@ -18,7 +22,7 @@ html {
 
 body {
     margin: 0;
-    background: var(--bg);
+    background: var(--cream);
     color: var(--ink);
     font-family: var(--font-body);
     font-size: 16px;
@@ -45,7 +49,7 @@ button:focus-visible {
 /* Header */
 .site-header {
     border-bottom: 1px solid var(--line);
-    background: var(--bg);
+    background: var(--cream);
     position: sticky;
     top: 0;
     z-index: 10;
@@ -63,6 +67,7 @@ button:focus-visible {
     font-weight: 600;
     font-size: 1.1rem;
     letter-spacing: 0.02em;
+    color: var(--accent);
 }
 
 .header-nav {
@@ -78,12 +83,21 @@ button:focus-visible {
 }
 
 .header-nav a:hover {
-    color: var(--ink);
+    color: var(--accent);
 }
 
-/* Hero */
+/* Hero — the one bold moment */
 .hero {
-    padding: 96px 24px 72px;
+    background: var(--ink-deep);
+    color: var(--cream);
+    padding: 100px 24px 80px;
+    max-width: none;
+}
+
+.hero-inner {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px;
 }
 
 .hero-eyebrow {
@@ -100,23 +114,35 @@ button:focus-visible {
     font-size: clamp(2.6rem, 6vw, 4rem);
     line-height: 1.05;
     letter-spacing: -0.01em;
+    color: var(--cream);
 }
 
 .hero-desc {
     max-width: 46ch;
     margin: 0;
-    color: var(--ink-soft);
+    color: var(--paper-soft);
     font-size: 1.05rem;
 }
 
 /* Sections */
-section {
+section:not(.hero) {
     padding: 56px 24px;
     border-top: 1px solid var(--line);
 }
 
 .section-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     margin-bottom: 28px;
+}
+
+.section-head::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: var(--accent);
+    flex-shrink: 0;
 }
 
 .section-head h2 {
@@ -140,13 +166,18 @@ section {
 }
 
 .project-item {
-    padding: 24px 0;
+    padding: 24px 0 24px 20px;
     border-top: 1px solid var(--line);
+    border-left: 3px solid transparent;
+    transition: border-left-color 0.15s ease;
+}
+
+.project-item:hover {
+    border-left-color: var(--accent-coral);
 }
 
 .project-item:first-child {
     border-top: none;
-    padding-top: 0;
 }
 
 .project-info h3 {
@@ -189,7 +220,7 @@ section {
     .hero {
         padding: 64px 20px 48px;
     }
-    section {
+    section:not(.hero) {
         padding: 40px 20px;
     }
     .header-nav {
